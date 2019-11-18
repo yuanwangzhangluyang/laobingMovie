@@ -1,0 +1,29 @@
+<!--pages/home/home.wxml-->
+<!-- 搜索 -->
+  <van-search value="{{ value }}" placeholder="请输入搜索关键词" use-action-slot bind:search="onSearch" >
+    <view slot="action" bind:tap="onSearch">搜索</view>
+  </van-search>
+<!-- 轮播图区域 -->
+<view class="slide">
+  <swiper indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+    <swiper-item wx:for="{{myimg}}" wx:key="id">
+      <image bindtap="jumpComment" data-id="{{item.id}}" src="{{item.images.small}}" mode="aspectFill" />
+    </swiper-item>
+  </swiper>
+</view>
+
+
+<!-- 中部展示图 -->
+<view class="board-item">
+  <view class="movie-top">
+    为您推荐正在热映
+  </view>
+  <view class="inner">
+      <view class="movie-item" wx:for="{{imgs}}" wx:key="id">
+        <image bindtap="jumpComment" data-id="{{item.id}}" src="{{ item.images.small }}" mode="aspectFill"/>
+        <view>{{item.title}}</view>
+      </view>
+  </view>
+</view>
+
+

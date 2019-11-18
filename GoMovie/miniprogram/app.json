@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/comment/comment",
+    "pages/list/list",
+    "pages/mymovie/mymovie"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#e54847",
+    "navigationBarTitleText": "老兵看电影",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#cccccc",
+    "selectedColor": "#e54847",
+    "list": [
+      {
+      "pagePath": "pages/home/home",
+      "text": "首页",
+      "iconPath": "images/01.png",
+      "selectedIconPath": "images/01_active.png"
+      },
+{
+  "pagePath": "pages/list/list",
+  "text": "电影",
+  "iconPath": "images/04.png",
+  "selectedIconPath": "images/04_active.png"
+},
+{
+  "pagePath": "pages/mymovie/mymovie",
+  "text": "我的",
+  "iconPath": "images/02.png",
+  "selectedIconPath": "images/02_active.png"
+}
+    ]
+  }
+}

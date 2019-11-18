@@ -1,0 +1,45 @@
+/* pages/home/home.wxss */
+.movie-top{
+  padding: 30rpx;
+  font-size: 30rpx;
+}
+
+.slide swiper {
+  height: 480rpx;
+}
+
+.slide swiper image {
+  height: 100%;
+  width: 100%;
+}
+/* .board {
+  box-sizing: border-box;
+  background-color: #f8f9fb;
+} */
+
+.board-item {
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 30rpx 0;
+  background-color: #fff;
+}
+
+ .board-item .inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.board-item .inner .movie-item {
+  width: 30%;
+}
+ .inner .movie-item image {
+  width: 250rpx;
+  height: 350rpx;
+}
+
+ .inner .movie-item view {
+  font-size: 30rpx;
+  text-align: center;
+  padding-bottom:10rpx;
+}
+

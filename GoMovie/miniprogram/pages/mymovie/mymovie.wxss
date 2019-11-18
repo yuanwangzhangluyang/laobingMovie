@@ -1,0 +1,112 @@
+/* pages/mymovie/mymovie.wxss */
+/*将头像修改圆形*/
+/*1:父元素相对定位*/
+.profile{
+  /* background: #a54847; */
+  background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573822280128&di=4681a02acd3ae9fcc8f92a32581985a9&imgtype=0&src=http%3A%2F%2Fimg.1ppt.com%2Fuploads%2Fallimg%2F1901%2F1_190115190334_1.JPG) no-repeat;
+  background-size: 100% 100%;
+  height:400rpx;
+  text-align: center; /*子元素居中*/
+  position: relative; /*相对定位*/
+  width:100%;
+}
+
+/* 我喜欢的电影 */
+/* 标题修改 */
+.myLike{
+  text-align: left;
+  font-size:40rpx;
+  color: #e54847;
+  font-weight: 600;
+  margin: 30rpx 30rpx;
+}
+/* 弹性布局让一排多个 */
+.collect{
+  padding: 0 30rpx;
+  display: flex;
+  flex-wrap:wrap;
+   justify-content:space-between;
+}
+/* 内部在弹性布局是图片与文字垂直 */
+.collect-item{
+  display: flex;
+  flex-direction:column;
+  width: 200rpx;
+  height: 340rpx;
+  margin-bottom: 20rpx;
+}
+/* 修改图片大小 */
+.collectImg{
+  width: 180rpx;
+  height: 300rpx
+}
+/* 修饰文字 */
+.collectTitle{
+  overflow: hidden;
+  text-align: center;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  width: 180rpx;
+  font-size: 30rpx;
+  padding-top:10rpx;
+}
+
+/*2:子元素绝对定位圆角50%*/
+.profile-img{
+  position: absolute;/*绝对定位*/
+  width:200rpx;      /*宽高*/
+  height:200rpx;
+  display: block;
+  overflow: hidden;  /*溢出隐藏*/
+  border-radius: 50%;/*圆角*/
+  left:50%;
+  transform: translate(-50%,60rpx);
+}
+.profile-name{
+  font-size: 30rpx;
+  color:#fff;
+  position: absolute;
+  bottom:85rpx;
+  left:44%;
+}
+.profile button{
+  font-size: 38rpx;
+  color:#fff;
+  margin-top:320rpx;
+}
+
+.comText{
+  text-align: left;
+  font-size:40rpx;
+  color: #e54847;
+  font-weight: 600;
+  margin: 30rpx 30rpx;
+}
+.comPop+.comPop{
+  border-top:solid 1px #e8e3d3;
+  padding-top:10rpx;
+}
+.comPop{
+  margin-bottom: 30rpx;
+  padding-left:20rpx;
+}
+.comImg{
+  width: 100rpx;
+  height:100rpx;
+  border-radius: 50%;
+  vertical-align:middle;
+  display: inline-block;
+  overflow: hidden;
+}
+.comName{
+  margin: 0 10rpx;
+}
+.comContent{
+  border-top: solid 1px #e8e3d3;
+  margin-top:10rpx;
+  padding: 010rpx;
+}
+.comimage{
+  width: 200rpx;
+  height: 200rpx;
+}

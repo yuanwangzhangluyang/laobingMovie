@@ -1,0 +1,59 @@
+/* pages/map/map.wxss */
+
+/* 一部电影 */
+.movie {
+  display: flex; /*弹性布局*/
+  padding: 10rpx; /*内距离*/
+  border-bottom: 1px solid #ccc; /*底部边框*/
+}
+
+/* 左侧图片 */
+.movie-img {
+  width: 160rpx; /*图片宽度高度*/
+  height: 230rpx;
+  margin-right: 40rpx;
+  margin-left: 10rpx;
+  border-radius: 10rpx;
+}
+
+/* 右侧电影介绍 */
+.movie-info {
+  flex: 1; /*将右侧区域充满*/
+  font-size: 28rpx; /*右侧文字大小*/
+  line-height: 2; /*原有间距1.8倍*/
+  position: relative;
+}
+
+/* 标题 */
+.movie-title {
+  color: #000; /*文字颜色*/
+  font-size: 36rpx; /*字体大小*/
+  font-weight: 600;
+}
+
+/* 分数 */
+.movie-score {
+  color: #faaf00; /*橙色高亮*/
+}
+
+/* 按钮 */
+/* .movie-comment {
+  margin-top: -90rpx;
+  margin-right: 20rpx;
+} */
+.btn-like{
+  position: absolute;
+  right:20rpx;
+  top:20rpx;
+  width:35rpx;
+  height: 35rpx;
+}
+.movie-comment{
+  height: 60rpx; /*按钮高度*/
+  width: 150rpx;
+  background: #e54847; /*背景*/
+  color: #fff; /*文字颜色*/
+  font-size: 26rpx; /*文字大小*/
+  margin-top: -100rpx;
+  margin-right: 20rpx;
+}

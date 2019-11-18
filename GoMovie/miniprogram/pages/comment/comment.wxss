@@ -1,0 +1,92 @@
+/*1:背景图片*/
+.detail-container{
+  height:400rpx; /*背景高度*/
+  opacity: .9;   /*透明度*/
+  filter:blur(40rpx);/*模糊滤镜*/
+}
+/*2:遮罩层*/
+.detail-mask{
+  width:100%;/*遮罩层填满父元素*/
+  height:400rpx;/*高度*/
+  background: #333;/*背景色灰色*/
+  position: absolute;/*定位*/
+  left:0;/*左侧与顶部 0*/
+  top:0;
+  z-index: -1;
+}
+/*3:电影详细信息*/
+.detail-info{
+  /*显示模糊图片上方*/
+  position: absolute;/*绝对定位置*/
+  top:0;
+  left:0;
+  width:100%;/*宽度填满整个父元素*/
+  height:400rpx;/*高度400*/
+  display: flex;/*弹性布局*/
+  padding:20rpx;/*四个边加内边距*/
+}
+
+/*4:图片大小*/
+.detail-img{
+  width:280rpx;/*左侧图片宽度*/
+  height:90%;
+  margin-right: 24rpx;/*右侧间距文字*/
+}
+/*5:右侧区域 电影内容*/
+.detail{
+  line-height: 60rpx;/*行高*/
+}
+.detail view{
+  color:#fff;    /*电影介绍文字*/
+  font-size:24rpx;
+}
+/*6:分数*/
+.detail .detail-sc{
+  color:#fc0;
+  font-size:36rpx;
+}
+/*电影描述*/
+.desc{
+  color:#555;
+  font-size:24rpx;
+  padding:20rpx;
+}
+
+
+
+.comment{
+  padding: 10rpx;
+  margin:20rpx;
+  border:solid 1px #e8e3d3;
+  border-radius: 10rpx;
+}
+.comText{
+  margin-bottom: 10rpx;
+}
+.comPop+.comPop{
+  border-top:solid 1px #e8e3d3;
+  padding-top:10rpx;
+}
+.comPop{
+  margin-bottom: 30rpx;
+}
+.comImg{
+  width: 100rpx;
+  height:100rpx;
+  border-radius: 50%;
+  vertical-align:middle;
+  display: inline-block;
+  overflow: hidden;
+}
+.comName{
+  margin: 0 10rpx;
+}
+.comContent{
+  border-top: solid 1px #e8e3d3;
+  margin-top:10rpx;
+  padding: 010rpx;
+}
+.comimage{
+  width: 200rpx;
+  height: 200rpx;
+}

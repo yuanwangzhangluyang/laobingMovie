@@ -1,0 +1,57 @@
+<!--pages/mymovie/mymovie.wxml-->
+<!--个人中心-->
+<view class="profile">
+  <view class="profile-img">
+    <open-data type="userAvatarUrl">
+    </open-data>
+  </view>
+  <view class="profile-name">
+    <open-data type="userNickName">
+    </open-data>
+  </view>
+  <button open-type="getUserInfo" bindgetuserinfo="handle3">
+    获取用户信息
+  </button>
+</view>
+
+<!-- 我喜欢的电影 -->
+<view>
+  <view class="myLike">我喜欢的电影</view>
+    <view class="collect">
+      <view class="collect-for" wx:for="{{list}}" wx:key="index">
+        <view class="collect-item">
+          <image class="collectImg" bindtap="skip" data-id="{{item.id}}" src="{{item.img}}"></image>
+          <text class="collectTitle">{{item.title}}</text>
+        </view> 
+      </view>
+    </view>
+</view>
+
+<!--2:用户输入区域-->
+<view class="user_view">
+  <!--3:输入框 喜欢原因-->
+  <van-field value="{{ content }}" placeholder="喜欢原因" bind:change="onContentChange" />
+  <!--4:按钮   保留经典画面-->
+  <van-button class="mybtn" size="large" type="primary" bindtap="selectImg">保留经典画面</van-button>
+  <!--5:预览经典画面-->
+  <view>
+    <image src="{{images}}"></image>
+  </view>
+  <!--6:按钮提交-->
+  <van-button class="mybtn" size="large" type="danger" bindtap="submit">提交</van-button>
+  <view class="comment">
+    <view class="comText">评论：</view>
+    <!-- 用户评论内容 -->
+    <view class="comPop" wx:for="{{comment}}" wx:key="index">
+      <!-- 用户头像 -->
+      <view class="comImg">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <!-- 用户名字 -->
+      <open-data class="comName" type="userNickName"></open-data>
+      <view class="comContent">{{item.content}}</view>
+      <!-- 图片 -->
+      <image class="comimage" src="{{item.fileId}}"></image>
+    </view>
+  </view>
+</view>
